@@ -1,0 +1,370 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+
+<head>
+    <title>OpenTraders - блогплатформа для трейдеров финансовых рынков</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="DESCRIPTION" content="Сервисы для трейдеров: блоги, рейтинги, обсуждения, торговые роботы, конкурсы и др." />
+    <meta name="KEYWORDS" content="FOREX, рынки, открыть счет, брокеры, советники, конкурсы Forex, MetaTrader, MT4, MT5, аналитика, ФОРЕКС, трейдеры, блоги трейдеров, социальная сеть, бесплатный, фондовый рынок" />
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/bootstrap.css?v=2" />
+    <link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/bootstrap-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/style-nt2.css?v=3" />
+    <link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/main.css" />
+    <!--[if IE 6]><link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/ie6.css?v=1" /><![endif]-->
+    <!--[if gte IE 7]><link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/ie7.css?v=1" /><![endif]-->
+    <link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/Roar.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/piechart.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/Autocompleter.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/micro.css" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <!-- * Modules "Place" and "Event" * -->
+    <link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/place.css?v=3" />
+    <link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/event.css" />
+    <!--[if gt IE 6]><link rel="stylesheet" type="text/css" href="http://www.opentraders.ru/templates/skin/g6h/css/simple_comments.css" /><![endif]-->
+
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.opentraders.ru/search/opensearch/" title="OpenTraders - блогплатформа для трейдеров финансовых рынков" />
+
+    <link rel="alternate" type="application/rss+xml" href="http://www.opentraders.ru/rss/index/" title="OpenTraders - блогплатформа для трейдеров финансовых рынков">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.opentraders.ru/classes/lib/external/jquery/jquery.js"></script>
+    <script type="text/javascript" src="http://www.opentraders.ru/templates/skin/g6h/js/bootstrap.js"></script>
+    <script>jQuery.noConflict()</script>
+
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <header class="main-header">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs">
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+                    <div class="logo">
+                        <a href="http://www.opentraders.ru">
+                            <img src="http://www.opentraders.ru/templates/skin/g6h/images/nt/logo_white.png">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 col-md-7 col-sm-4 col-xs-12">
+                    <nav class="nav-bar">
+                        <ul id="yw0" class="nav menu clearfix">
+                            <li class="active"><a href="http://www.opentraders.ru/">Главная</a></li>
+                            <li><a href="http://www.opentraders.ru/new/">Новые записи <sup>40</sup></a></li>
+                            <li><a href="http://www.opentraders.ru/top/">Лучшее</a></li>
+                            <li><a href="http://www.opentraders.ru/downloads/">Файлы</a></li>
+                            <li><a href="http://www.opentraders.ru/search/">Поиск</a></li>
+                        </ul>
+                        <a id="touch-menu" href="javascript:void(0)" class="mobile-menu">
+                            <span class="glyphicon glyphicon-menu-hamburger" style="font-size:24px;"></span>
+                        </a>
+                    </nav>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="color-head"></div>
+    </header>
+
+
+    <div class="container">
+        <div class="row" style="margin: 30px 0 20px 0;">
+            <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs">
+            </div>
+            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-12" style="text-align: center;">
+                <!--// <a href="http://www.alpari.ru/?partner_id=60471" target="_blank"><img src="http://ws.alpari.ru/gtt/bnr.php?key=3a38a81f&subject=ib&type=GIF&date=2016-01-29 10:37:18&pid=60471&name=who_is_who&partner_id=60471&_bnr=http://banners.alpari-idc.ru/partnership-banners/images/336.gif?partner_id=60471" alt="" /></a> //-->
+                <a href="http://www.opentraders.ru/goto.php?www=trading" target="_blank"><img src="http://www.opentraders.ru/download/alpari/alpari_21.gif" alt="" /></a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+        </div>
+    </div>
+
+
+    <h2 align="center">Подбор дебетовых карт с кэшбэком</h2>
+    <br/>
+    <p align="center">Чтобы определить самую выгодную и подходящую для вас дебетовую карту,
+        вам следует ввести в соотвествующие поля свои среднемесячные расходы</p>
+
+    <div id="cost" align="center"></div>
+    <div class="container my-5">
+        <h3> Категории:</h3>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-10" id="feedback">
+                    <form id="myForm">
+
+                        <div class="row">
+
+                            <div class="form-group col-md-8">
+                                <label for="supermarketRub" class="col-form-label">Супермаркеты</label>
+                                <input class="form-control" id="supermarketRub" onkeyup="checkParams()" name="supermarketRub" pattern="[0-9]{,5}" placeholder="0">
+                            </div>
+
+                            <div class="form-group col-md-8">
+                                <label for="transportRub" class="col-form-label">Транспорт</label>
+                                <input  class="form-control" id="transportRub" onkeyup="checkParams()" name="transportRub" pattern="[0-9]{,5}"  placeholder="0">
+                            </div>
+
+                            <div class="form-group col-md-8">
+                                <label for="fuellingRub" class="col-form-label">АЗС</label>
+                                <input class="form-control" id="fuellingRub" onkeyup="checkParams()" name="fuellingRub" pattern="[0-9]{,5}"  placeholder="0">
+                            </div>
+
+                            <div class="form-group col-md-8">
+                                <label for="restaurantRub" class="col-form-label">Кафе, рестораны</label>
+                                <input class="form-control" id="restaurantRub" onkeyup="checkParams()" name="restaurantRub" pattern="[0-9]{,5}"  placeholder="0">
+                            </div>
+
+                            <div class="form-group col-md-8">
+                                <label for="clothesShoesRub" class="col-form-label">Одежда, обувь</label>
+                                <input class="form-control" id="clothesShoesRub" onkeyup="checkParams()" name="clothesShoesRub" pattern="[0-9]{,5}"  placeholder="0">
+                            </div>
+
+                            <div class="form-group col-md-8">
+                                <label for="houseRepairRub" class="col-form-label">Дом, ремонт</label>
+                                <input class="form-control" id="houseRepairRub" onkeyup="checkParams()" name="houseRepairRub" pattern="[0-9]{,5}"  placeholder="0">
+                            </div>
+
+                            <div class="form-group col-md-8">
+                                <label for="entertainmentRub" class="col-form-label">Досуг, развлечения</label>
+                                <input class="form-control" id="entertainmentRub" onkeyup="checkParams()" name="entertainmentRub" pattern="[0-9]{,5}"  placeholder="0">
+                            </div>
+
+                            <div class="form-group col-md-8">
+                                <label for="pharmacyRub" class="col-form-label">Аптеки</label>
+                                <input class="form-control" id="pharmacyRub" onkeyup="checkParams()" name="pharmacyRub" pattern="[0-9]{,5}"  placeholder="0">
+                            </div>
+
+                            <div class="form-group col-md-8">
+                                <label for="beautyRub" class="col-form-label">Салоны красоты</label>
+                                <input class="form-control" id="beautyRub" onkeyup="checkParams()" name="beautyRub" pattern="[0-9]{,5}"  placeholder="0">
+                            </div>
+
+                            <div class="form-group col-md-8">
+                                <label for="mobileRub" class="col-form-label">Мобильная связь</label>
+                                <input class="form-control" id="mobileRub" onkeyup="checkParams()" name="mobileRub" pattern="[0-9]{,5}"  placeholder="0">
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <button class="btn btn-primary" id="bth-search" type="submit" disabled>Подобрать карту</button>
+                            </div>
+
+                            <div class="form-group col-md-8">
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                    <script>
+
+                        function checkParams() {
+
+                            var supermarket = $('#supermarketRub').val();
+                            var transport = $('#transportRub').val();
+                            var fuelling = $('#fuellingRub').val();
+                            var restaurant = $('#restaurantRub').val();
+                            var clothesShoes = $('#clothesShoesRub').val();
+                            var houseRepair = $('#houseRepairRub').val();
+                            var entertainment = $('#entertainmentRub').val();
+                            var pharmacy = $('#pharmacyRub').val();
+                            var beauty = $('#beautyRub').val();
+                            var mobile = $('#mobileRub').val();
+
+                            var supermarket = $('#supermarketRub').val();
+                            if(supermarket == ''){
+                                $('#supermarketRub').val('0');
+                            }
+                            var transport = $('#transportRub').val();
+                            if(transport == ''){
+                                $('#transportRub').val('0');
+                            }
+                            var fuelling = $('#fuellingRub').val();
+                            if(fuelling == ''){
+                                $('#fuellingRub').val('0');
+                            }
+                            var restaurant = $('#restaurantRub').val();
+                            if(restaurant == ''){
+                                $('#restaurantRub').val('0');
+                            }
+                            var clothesShoes = $('#clothesShoesRub').val();
+                            if(clothesShoes == ''){
+                                $('#clothesShoesRub').val('0');
+                            }
+                            var houseRepair = $('#houseRepairRub').val();
+                            if(houseRepair == ''){
+                                $('#houseRepairRub').val('0');
+                            }
+                            var entertainment = $('#entertainmentRub').val();
+                            if(entertainment == ''){
+                                $('#entertainmentRub').val('0');
+                            }
+                            var pharmacy = $('#pharmacyRub').val();
+                            if(pharmacy == ''){
+                                $('#pharmacyRub').val('0');
+                            }
+                            var beauty = $('#beautyRub').val();
+                            if(beauty == ''){
+                                $('#beautyRub').val('0');
+                            }
+                            var mobile = $('#mobileRub').val();
+                            if(mobile == ''){
+                                $('#mobileRub').val('0');
+                            }
+
+
+
+                            if(supermarket.length != 0 && transport.length != 0 && fuelling.length != 0
+                                && restaurant.length != 0 && clothesShoes.length != 0 && houseRepair.length != 0
+                                && entertainment.length != 0 && pharmacy.length != 0 && beauty.length != 0
+                                && mobile.length != 0) {
+                                $('#bth-search').removeAttr('disabled');
+                            } else {
+                                $('#bth-search').attr('disabled', 'disabled');
+                            }
+                        }
+
+
+
+
+
+                        $(document).ready(function () {
+
+
+                            $("#myForm").submit(function (event) {
+
+                                //stop submit the form, we will post it manually.
+                                event.preventDefault();
+
+
+                                fire_ajax_submit();
+
+                            });
+                        });
+
+
+                        function fire_ajax_submit() {
+
+
+                            var search = {}
+                            search["supermarketRub"] = $("#supermarketRub").val();
+                            search["transportRub"] = $("#transportRub").val();
+                            search["fuellingRub"] = $("#fuellingRub").val();
+                            search["restaurantRub"] = $("#restaurantRub").val();
+                            search["clothesShoesRub"] = $("#clothesShoesRub").val();
+                            search["houseRepairRub"] = $("#houseRepairRub").val();
+                            search["entertainmentRub"] = $("#entertainmentRub").val();
+                            search["pharmacyRub"] = $("#pharmacyRub").val();
+                            search["beautyRub"] = $("#beautyRub").val();
+                            search["mobileRub"] = $("#mobileRub").val();
+
+
+                            $("#bth-search").prop("disabled", true);
+
+                            $.ajax({
+                                type: "POST",
+                                contentType: "application/json",
+                                url: "/cards",
+                                data: JSON.stringify(search),
+                                dataType: 'json',
+                                cache: false,
+                                timeout: 600000,
+                                success: function (data) {
+
+                                    display(data);
+                                    console.log("SUCCESS : ", data);
+                                    $("#bth-search").prop("disabled", false);
+
+                                },
+                                error: function (e) {
+
+                                    var json = "<h4>Ajax Response</h4><pre>"
+                                        + e.responseText + "</pre>";
+                                    $('#feedback').html(json);
+
+                                    console.log("ERROR : ", e);
+                                    $("#bth-search").prop("disabled", false);
+
+                                }
+                            });
+                        }
+
+                        function display(data) {
+
+                            let xhr = new XMLHttpRequest();
+
+                            xhr.open('GET', '/cards');
+
+                            xhr.send();
+                            var a = xhr.responseText;
+                            xhr.onload = function() {
+                                if (xhr.status != 200) { // HTTP ошибка?
+                                    // обработаем ошибку
+                                    alert( 'Ошибка: ' + xhr.status);
+                                    return;
+                                }
+
+                                // получим ответ из xhr.response
+                            };
+
+                            xhr.onprogress = function(event) {
+                                // выведем прогресс
+                                var a = xhr.responseText;
+                                var html = '';
+
+                                $('#feedback').html(a+html);
+
+
+                            };
+
+                            xhr.onerror = function() {
+                                // обработаем ошибку, не связанную с HTTP (например, нет соединения)
+                            };
+
+
+                        }
+
+
+
+
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
