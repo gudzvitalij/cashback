@@ -47,6 +47,7 @@ public class CashbackService {
     }
 
 
+
     public int getProfit() {
         return profit;
     }

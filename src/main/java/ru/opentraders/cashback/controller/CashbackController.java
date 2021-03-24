@@ -22,13 +22,13 @@ public class CashbackController {
     }
 
     @PostMapping(value = "/cards", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public CostDto saveCost(@RequestBody CostDto costDto) {
+    public CostDto saveCost(@RequestBody CostDto costDto)  {
         this.costDto = costDto;
         return costDto;
     }
 
     @GetMapping(value = "/cards")
-    public String getResult(){
+    public String getResult()  {
         cashbackService.findProfit(costDto);
         return (CHOISE + cashbackService.getBestCard() + ","
                 + ECONOMY + cashbackService.getProfit() + " рублей");

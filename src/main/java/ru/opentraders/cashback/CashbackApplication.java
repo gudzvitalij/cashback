@@ -12,8 +12,6 @@ public class CashbackApplication {
 	public static void main(String[] args) {
 		logger.info("Before Starting application");
 		SpringApplication.run(CashbackApplication.class, args);
-		logger.debug("Starting my application in debug with {} arguments", args.length);
-		logger.info("Starting my application with {} arguments.", args.length);
 	}
 
 }

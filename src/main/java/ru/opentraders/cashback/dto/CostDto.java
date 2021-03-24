@@ -1,8 +1,8 @@
 package ru.opentraders.cashback.dto;
 
-import com.sun.istack.NotNull;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.jetbrains.annotations.NotNull;
 
 
 @ToString
@@ -28,7 +28,7 @@ public class CostDto {
     private Integer beautyRub;
     @NotNull
     private Integer mobileRub;
-
+    @NotNull
     public CostDto() {
     }
 
