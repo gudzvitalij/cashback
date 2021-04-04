@@ -29,25 +29,10 @@ public class ClauseService {
     }
 
 
-//    public List<Float> findByID(Integer id) {
-//
-//        return clauseRepository.findById(id)
-//                .stream()
-//                .map(clauseConverter::fromClauseToClauseDto)
-//                .map(p->p.getMinBalance()*p.getPersentage())
-//                .collect(Collectors.toList());
-//    }
 
     public boolean checkCost(Integer id, CostDto costDto) {
-
-        return (findById(id).getMinCost() <= costService.sum(costDto) && findById(id).getMaxCost()>=costService.sum(costDto));
-
-//        return clauseRepository.findById(id)
-//                .stream()
-//                .map(clauseConverter::fromClauseToClauseDto)
-//                .allMatch(p->p.getMinCost()<=costService.sum(costDto) && p.getMaxCost()>=costService.sum(costDto));
-
-
+        return (findById(id).getMinCost() <= costService.sum(costDto)
+                && findById(id).getMaxCost()>=costService.sum(costDto));
     }
 
 

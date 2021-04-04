@@ -10,16 +10,22 @@ public class CashbackService {
     private final ClauseService clauseService;
     private int profit;
     private String bestCard;
+    private CostDto costDto;
+
+    public void setCostDto(CostDto costDto) {
+        this.costDto = costDto;
+    }
 
     public CashbackService(CategoryService categoryService, ClauseService clauseService) {
         this.categoryService = categoryService;
         this.clauseService = clauseService;
     }
 
-    public void findProfit(CostDto costDto) {
+    public void findProfit() {
         Integer index = 0;
         Float maxAmount = 0f;
         Float amount = 0f;
+
 
         for (Integer i = 1; i <= categoryService.findAll().size(); i++) {
 
@@ -42,17 +48,19 @@ public class CashbackService {
                 }
             }
         }
-        profit = 12*Math.round(maxAmount);
-        bestCard = categoryService.findById(index).getNameCard();
+        this.profit = 12*Math.round(maxAmount);
+        this.bestCard = categoryService.findById(index).getNameCard();
+    }
+
+
+    public String buildMessage() {
+        findProfit();
+        String choice = MessagePattern.CHOICE.getValue();
+        String economy = MessagePattern.ECONOMY.getValue();
+        return String.format(choice+economy,this.bestCard,this.profit);
+
     }
 
 
 
-    public int getProfit() {
-        return profit;
-    }
-
-    public String getBestCard() {
-        return bestCard;
-    }
 }

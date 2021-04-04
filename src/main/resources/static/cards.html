@@ -105,72 +105,73 @@
 
     <h2 align="center">Подбор дебетовых карт с кэшбэком</h2>
     <br/>
-    <p align="center">Чтобы определить самую выгодную и подходящую для вас дебетовую карту,
-        вам следует ввести в соотвествующие поля свои среднемесячные расходы</p>
+    <p align="center"><font size="3" color="black" face="Arial">Чтобы определить самую выгодную и подходящую для вас дебетовую карту,
+        вам следует ввести в соотвествующие поля свои среднемесячные расходы:</font></p>
+    <br/>
 
     <div id="cost" align="center"></div>
-    <div class="container my-5">
-        <h3> Категории:</h3>
+    <div class="container my-10">
+
 
         <div class="card">
             <div class="card-body">
                 <div class="col-md-10" id="feedback">
-                    <form id="myForm">
+                    <form id="myForm" >
 
-                        <div class="row">
+                        <div  class="row">
 
                             <div class="form-group col-md-8">
                                 <label for="supermarketRub" class="col-form-label">Супермаркеты</label>
-                                <input class="form-control" id="supermarketRub" onkeyup="checkParams()" name="supermarketRub" pattern="[0-9]{,5}" placeholder="0">
+                                <input  class="form-control" id="supermarketRub" onclick="this.select();" onkeyup="checkParams()" name="supermarketRub" pattern="[0-9]{,5}" placeholder="">
                             </div>
 
                             <div class="form-group col-md-8">
                                 <label for="transportRub" class="col-form-label">Транспорт</label>
-                                <input  class="form-control" id="transportRub" onkeyup="checkParams()" name="transportRub" pattern="[0-9]{,5}"  placeholder="0">
+                                <input  class="form-control" id="transportRub" onclick="this.select();" onkeyup="checkParams()" name="transportRub" pattern="[0-9]{,5}"  placeholder="">
                             </div>
 
                             <div class="form-group col-md-8">
                                 <label for="fuellingRub" class="col-form-label">АЗС</label>
-                                <input class="form-control" id="fuellingRub" onkeyup="checkParams()" name="fuellingRub" pattern="[0-9]{,5}"  placeholder="0">
+                                <input class="form-control" id="fuellingRub" onclick="this.select();" onkeyup="checkParams()" name="fuellingRub" pattern="[0-9]{,5}"  placeholder="">
                             </div>
 
                             <div class="form-group col-md-8">
                                 <label for="restaurantRub" class="col-form-label">Кафе, рестораны</label>
-                                <input class="form-control" id="restaurantRub" onkeyup="checkParams()" name="restaurantRub" pattern="[0-9]{,5}"  placeholder="0">
+                                <input class="form-control" id="restaurantRub" onclick="this.select();" onkeyup="checkParams()" name="restaurantRub" pattern="[0-9]{,5}"  placeholder="">
                             </div>
 
                             <div class="form-group col-md-8">
                                 <label for="clothesShoesRub" class="col-form-label">Одежда, обувь</label>
-                                <input class="form-control" id="clothesShoesRub" onkeyup="checkParams()" name="clothesShoesRub" pattern="[0-9]{,5}"  placeholder="0">
+                                <input class="form-control" id="clothesShoesRub" onclick="this.select();" onkeyup="checkParams()" name="clothesShoesRub" pattern="[0-9]{,5}"  placeholder="">
                             </div>
 
                             <div class="form-group col-md-8">
                                 <label for="houseRepairRub" class="col-form-label">Дом, ремонт</label>
-                                <input class="form-control" id="houseRepairRub" onkeyup="checkParams()" name="houseRepairRub" pattern="[0-9]{,5}"  placeholder="0">
+                                <input class="form-control" id="houseRepairRub" onclick="this.select();" onkeyup="checkParams()" name="houseRepairRub" pattern="[0-9]{,5}"  placeholder="">
                             </div>
 
                             <div class="form-group col-md-8">
                                 <label for="entertainmentRub" class="col-form-label">Досуг, развлечения</label>
-                                <input class="form-control" id="entertainmentRub" onkeyup="checkParams()" name="entertainmentRub" pattern="[0-9]{,5}"  placeholder="0">
+                                <input class="form-control" id="entertainmentRub" onclick="this.select();" onkeyup="checkParams()" name="entertainmentRub" pattern="[0-9]{,5}"  placeholder="">
                             </div>
 
                             <div class="form-group col-md-8">
                                 <label for="pharmacyRub" class="col-form-label">Аптеки</label>
-                                <input class="form-control" id="pharmacyRub" onkeyup="checkParams()" name="pharmacyRub" pattern="[0-9]{,5}"  placeholder="0">
+                                <input class="form-control" id="pharmacyRub" onclick="this.select();" onkeyup="checkParams()" name="pharmacyRub" pattern="[0-9]{,5}"  placeholder="">
                             </div>
 
                             <div class="form-group col-md-8">
                                 <label for="beautyRub" class="col-form-label">Салоны красоты</label>
-                                <input class="form-control" id="beautyRub" onkeyup="checkParams()" name="beautyRub" pattern="[0-9]{,5}"  placeholder="0">
+                                <input class="form-control" id="beautyRub" onclick="this.select();" onkeyup="checkParams()" name="beautyRub" pattern="[0-9]{,5}"  placeholder="">
                             </div>
 
                             <div class="form-group col-md-8">
                                 <label for="mobileRub" class="col-form-label">Мобильная связь</label>
-                                <input class="form-control" id="mobileRub" onkeyup="checkParams()" name="mobileRub" pattern="[0-9]{,5}"  placeholder="0">
+                                <input class="form-control" id="mobileRub" onclick="this.select();" onkeyup="checkParams()" name="mobileRub" pattern="[0-9]{,5}"  placeholder="">
                             </div>
 
                             <div class="col-md-6">
-
+                                <br/>
                                 <button class="btn btn-primary" id="bth-search" type="submit" disabled>Подобрать карту</button>
                             </div>
 
@@ -183,6 +184,12 @@
                     </form>
 
                     <script>
+
+                        $("input").focus(function(){
+                            if(this.value == this.defaultValue){
+                                this.select();
+                            }
+                        });
 
                         function checkParams() {
 
@@ -252,14 +259,11 @@
 
 
 
-
-
                         $(document).ready(function () {
 
 
                             $("#myForm").submit(function (event) {
 
-                                //stop submit the form, we will post it manually.
                                 event.preventDefault();
 
 
@@ -297,14 +301,18 @@
                                 timeout: 600000,
                                 success: function (data) {
 
-                                    display(data);
+
+                                    var json = "<h4>Результаты:</h4><pre>"
+                                        + e.responseText + "</pre>";
+                                    $('#feedback').html(json);
+
                                     console.log("SUCCESS : ", data);
                                     $("#bth-search").prop("disabled", false);
 
                                 },
                                 error: function (e) {
 
-                                    var json = "<h4>Ajax Response</h4><pre>"
+                                    var json = "<h4>Результаты:</h4><pre>"
                                         + e.responseText + "</pre>";
                                     $('#feedback').html(json);
 
@@ -315,40 +323,7 @@
                             });
                         }
 
-                        function display(data) {
 
-                            let xhr = new XMLHttpRequest();
-
-                            xhr.open('GET', '/cards');
-
-                            xhr.send();
-                            var a = xhr.responseText;
-                            xhr.onload = function() {
-                                if (xhr.status != 200) { // HTTP ошибка?
-                                    // обработаем ошибку
-                                    alert( 'Ошибка: ' + xhr.status);
-                                    return;
-                                }
-
-                                // получим ответ из xhr.response
-                            };
-
-                            xhr.onprogress = function(event) {
-                                // выведем прогресс
-                                var a = xhr.responseText;
-                                var html = '';
-
-                                $('#feedback').html(a+html);
-
-
-                            };
-
-                            xhr.onerror = function() {
-                                // обработаем ошибку, не связанную с HTTP (например, нет соединения)
-                            };
-
-
-                        }
 
 
 

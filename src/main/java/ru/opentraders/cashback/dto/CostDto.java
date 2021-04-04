@@ -28,7 +28,7 @@ public class CostDto {
     private Integer beautyRub;
     @NotNull
     private Integer mobileRub;
-    @NotNull
+
     public CostDto() {
     }
 
