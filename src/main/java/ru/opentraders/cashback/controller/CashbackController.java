@@ -7,7 +7,6 @@ import ru.opentraders.cashback.service.CashbackService;
 
 @CrossOrigin
 @RestController
-@RequestMapping
 public class CashbackController {
 
     private final CashbackService cashbackService;
