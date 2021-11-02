@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  db:
+    image: postgres:13-alpine3.14
+    command: ["postgres", "-c", "log_statement=all"]
+    ports:
+      - "5431:5432"
+    environment:
+      - POSTGRES_DB=db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:ro

@@ -1,39 +1,3 @@
-CREATE DATABASE cashback;
-
-DROP TABLE IF EXISTS clause;
-DROP TABLE IF EXISTS category;
-
-
-CREATE TABLE IF NOT EXISTS clause
-(
-clause_id SERIAL PRIMARY KEY,
-name_card VARCHAR(50),
-cost_service INTEGER NOT NULL,
-min_cost INTEGER NOT NULL,
-max_cost INTEGER NOT NULL,
-min_balance INTEGER NOT NULL,
-persentage REAL NOT NULL
-);
-
-
-CREATE TABLE IF NOT EXISTS category
-(
-category_id SERIAL PRIMARY KEY,
-clause_id INTEGER,
-name_card VARCHAR(50),
-supermarket REAL NOT NULL,
-transport REAL NOT NULL,
-fuelling REAL NOT NULL,
-restaurant REAL NOT NULL,
-clothes_shoes REAL NOT NULL,
-house_repair REAL NOT NULL,
-entertainment REAL NOT NULL,
-pharmacy REAL NOT NULL,
-beauty REAL NOT NULL,
-mobile REAL NOT NULL,
-FOREIGN KEY (clause_id) REFERENCES clause(clause_id)
-);
-
 INSERT INTO clause (name_card,cost_service,min_cost,max_cost,min_balance,persentage)
 VALUES ('Билайн Альфа-банк','0', '10000','100000','10000','0.04');
 INSERT INTO clause (name_card,cost_service,min_cost,max_cost,min_balance,persentage)
